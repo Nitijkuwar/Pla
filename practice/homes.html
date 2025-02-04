@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* slider image */
+        .slider {
+            position: relative;
+
+        }
+
+        .slider-img img {
+            /* position: relative; */
+            height: 680px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slider-img::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #092a49b9;
+
+        }
+
+        /* Next & previous buttons */
+
+
+        /* Position the "next button" to the right */
+
+        .next {
+            color: #0796fe;
+            position: absolute;
+            cursor: pointer;
+            width: auto;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            right: 0;
+            top: 38rem;
+            background-color: #092a49;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            color: #0796fe;
+            position: absolute;
+            cursor: pointer;
+            width: auto;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            left: 92%;
+            top: 38rem;
+            background-color: #092a49;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: #0796fe;
+            color: white;
+        }
+
+        /* text 1*/
+        .slidertext1 {
+            text-align: center;
+            position: absolute;
+            top: 15rem;
+            left: 50px;
+
+            h2 {
+                /* position: absolute; */
+                /* top: 15rem;
+                left: 27.2rem; */
+                font-size: 44px;
+                font-weight: 200;
+                /* width: 40%; */
+
+            }
+
+            p {
+                /* position: absolute; */
+                /* top: 22rem;
+                left: 24rem; */
+                /* width: 48%; */
+                font-size: 20px;
+            }
+        }
+
+        /* text2 */
+        /* .slidertext2 {
+            text-align: center;
+
+            h2 {
+                position: absolute;
+                top: 15rem;
+                left: 27.2rem;
+                font-size: 44px;
+                font-weight: 200;
+                width: 45%;
+
+            }
+
+            p {
+                position: absolute;
+                top: 19rem;
+                left: 24rem;
+                width: 52%;
+                font-size: 20px;
+            }
+        }
+        .slidertext3 {
+            text-align: center;
+            width: auto;
+
+            h2 {
+                position: absolute;
+                top: 15rem;
+                left: 27.2rem;
+                font-size: 44px;
+                font-weight: 200;
+                width: 45%;
+
+            }
+
+            p {
+                position: absolute;
+                top: 19rem;
+                left: 24rem;
+                width: 52%;
+                font-size: 20px;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="slider">
+            <div class="slider-img">
+                <img src="/assets/images/home/homeslider-1.jfif" alt="home page">
+                <div class="slidertext1">
+                    <h2 style="color: white;">Empowering Businesses Through Financial Clarity</h2>
+                    <p style="color: white;">We provide essential services, turning complex financial data into clear
+                        insights for business success.</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="slider-img">
+                <img src="/assets/images/home/homeslider-2.jfif" alt="home page">
+
+
+                <div class="slidertext1">
+                    <h2 style="color: rgb(255, 255, 255);">Navigating Financial Landscapes</h2>
+                    <p style="color: white;">We expertly guide businesses through complex financial
+                        environments, ensuring compliance and strategic growth. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider">
+
+            <div class="slider-img">
+                <img src="/assets/images/home/homeslider-3.jfif" alt="home page">
+                <div class="slidertext1">
+                    <h2 style="color: rgb(255, 255, 255);"> Transforming Data into Decisions</h2>
+                    <p style="color: white;">We analyze financial data to deliver actionablr insights, empowering
+                        businesses to make informed desision for their future.</p>
+                </div>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </section>
+
+
+    <!-- javascript -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slider");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
