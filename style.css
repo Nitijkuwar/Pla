@@ -87,6 +87,9 @@ a {
 }
 
 .navbar {
+    transition: 0.4s;
+    position: sticky;
+    top: 0;
     text-align: end;
     background-color: #092a49;
     padding: 25px;
@@ -251,13 +254,6 @@ a {
 
 }
 
-/* Map embedded */
-.map {
-
-    margin-left: 30px;
-
-}
-
 /* footer */
 footer {
     background-color: #092a49;
@@ -348,24 +344,22 @@ footer {
         font-size: 20px;
     }
 
-    .button {
+    button {
         position: absolute;
-        left: 80%;
-        bottom: 15%;
-
-        button {
-            cursor: pointer;
-            width: 100px;
-            padding: 14px;
-            border-radius: 40px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        width: 100px;
+        padding: 14px;
+        border-radius: 40px;
+        font-size: 12px;
+        font-weight: bold;
     }
+
+
 }
 
-.button button:hover {
+button:hover {
     color: #0796f3;
     background-color: #092a49;
 }
@@ -392,7 +386,9 @@ hr {
 }
 
 /* Services section */
-
+.service{
+    margin-bottom: 50px;
+}
 
 /* for text */
 .service-text {
@@ -459,8 +455,8 @@ hr {
 
 /* team section */
 .team-container {
-    /* width: 80%; */
-    margin: 50px 50px;
+    width: 100%;
+    margin: 50px 0px 50px 0px;
 
 }
 
@@ -487,21 +483,21 @@ hr {
 /* image container */
 .team-container {
     justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 31px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
 }
 
 /* single image */
 
 .member {
     position: relative;
-
+    z-index: -1;
 }
 
 .image-wrapper img {
     border-radius: 20px;
-    width: 400px;
+    width: 320px;
     height: 400px;
     object-fit: cover;
 }
@@ -535,6 +531,7 @@ hr {
 
 /* image container */
 .about-img {
+    z-index: -1;
     position: relative;
 
 }
