@@ -18,7 +18,7 @@
 
 /* footer */
 
-@media (max-width:991px) and (min-width:320px) {
+@media (max-width:991px) and (min-width:700px) {
    .main-footer {
       display: flex;
       flex-direction: column;
@@ -30,6 +30,42 @@
 
    .newsletter {
       width: 100%;
+   }
+}
+
+@media (max-width:700px) and (min-width:320px) {
+   .main-footer {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .head {
+      width: 100%;
+   }
+
+   .newsletter {
+      width: 100%;
+   }
+
+   .form {
+      position: relative;
+
+      input::placeholder {
+         font-size: 15px;
+      }
+
+      .button {
+         position: absolute;
+         left: 80%;
+         bottom: 15%;
+
+         button {
+            cursor: pointer;
+            width: 100%;
+            padding: 10px;
+         }
+
+      }
    }
 }
 
@@ -529,21 +565,106 @@
      } */
 
 }
-/* contact */
-@media (max-width:1300px) and (min-width:1000px){
-   .contact{
 
+/* contact */
+@media (max-width:1300px) and (min-width:1000px) {
+   .text {
+      margin-left: 10px;
    }
-   .office{
-      width: auto;
-      height: auto;
+
+   .office {
+      width: 350px;
+      /* height: 100px; */
    }
-   .phone{
-      width: auto;
-      height: auto;
+
+   .phone {
+      width: 350px;
+      /* height: 100px; */
    }
-   .email{
-      width: auto;
-      height: auto;
+
+   .email {
+      width: 350px;
+      /* height: 100px; */
    }
+
+   .map {
+      height: 480px;
+      width: 450px;
+   }
+}
+
+@media (max-width:1000px) and (min-width:460px) {
+   .sub-container {
+      flex-wrap: wrap;
+   }
+
+   .contact {
+      width: 100%;
+      row-gap: 20px;
+   }
+
+   .map {
+      width: 100%;
+   }
+
+   .text {
+      margin-left: 8px;
+   }
+
+   /* 
+   .office {
+      width: 350px;
+   }
+
+   .phone {
+      width: 350px;
+   }
+
+   .email {
+      width: 350px;
+   }
+   .map {
+      height: 480px;
+      width: 450px;
+   } */
+}
+
+@media (max-width:460px) and (min-width:320px) {
+   .sub-container {
+      flex-wrap: wrap;
+   }
+
+   .contact {
+      width: 100%;
+      row-gap: 20px;
+   }
+
+   .map {
+      width: 100%;
+   }
+
+   .text {
+      margin-left: 8px;
+
+      h2 {
+         font-size: 20px;
+      }
+   }
+
+   /* 
+   .office {
+      width: 350px;
+   }
+
+   .phone {
+      width: 350px;
+   }
+
+   .email {
+      width: 350px;
+   }
+   .map {
+      height: 480px;
+      width: 450px;
+   } */
 }
