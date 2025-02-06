@@ -40,15 +40,19 @@
     </div>
 
     <!-- navbar -->
-    <nav class="navbar">
-
-        <a href="index.html" class=" hover-link ">HOME</a>
-        <a href="about.html" class="hover-link">ABOUT</a>
-        <a href="service.html" class="hover-link">SERVICE</a>
-        <a href="team.html" class="hover-link">TEAM</a>
-        <a href="contact.html" class="hover-link active">CONTACT</a>
-
-        <a href="#" class="nav-toggle"><i class="fa-solid fa-bars"></i></a>
+    <nav class="navbar" id="myTopnav">
+        <div class="navlink">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+        <div class="home-bar">
+            <a href="javascript:void(0);" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </nav>
     <!-- Contact section -->
     <div class="container">
@@ -132,6 +136,18 @@
             <p>Designed By <a href="">Velocis Core</a></p>
         </div>
     </footer>
+
+    <!-- javascript for navbar -->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>
 </body>
 
 </html>

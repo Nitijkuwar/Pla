@@ -3,14 +3,45 @@
    .top-header {
       display: none;
    }
+}
 
-   .nav-toggle {
-      display: block;
-      margin-right: 30px;
+@media (max-width:2440px) and (min-width:1000px) {
+   .home-bar {
+      display: none;
+   }
+}
+
+@media (max-width:1000px) and (min-width:320px) {
+   .navlink a {
+      display: none;
    }
 
-   .hover-link {
-      display: none;
+   .home-bar {
+      display: block;
+      font-size: 30px;
+      text-align: right;
+   }
+
+   .navbar.responsive {
+      position: relative;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+   }
+
+   .navbar.responsive .home-bar {
+      position: absolute;
+      /* display: block; */
+      right: 20px;
+      top: 20px;
+      font-size: 30px;
+   }
+
+   .navbar.responsive .navlink a {
+      display: block;
+      text-align: center;
+      /* width: 100%; */
+      padding: 8px;
    }
 }
 
@@ -49,6 +80,7 @@
    }
 
    .form {
+      
       input {
          font-size: 10px;
       }
@@ -58,6 +90,7 @@
       }
 
       button {
+         
          bottom: 15px;
          width: 70px;
          padding: 8px;
@@ -728,16 +761,19 @@
       /* column-gap: 20px; */
       /* margin: 50px 15px; */
    }
+
    .image-wrapper img {
       width: 250px;
       height: 300px;
    }
+
    .info {
       left: 50px;
       width: 150px;
 
    }
 }
+
 @media (max-width:790px) and (min-width:500px) {
    .team-container {
       display: flex;
@@ -773,6 +809,7 @@
 
    }
 }
+
 @media (max-width:500px) and (min-width:320px) {
    .team-container {
       display: flex;

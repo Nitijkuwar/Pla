@@ -41,17 +41,20 @@
     </header>
 
     <!-- navbar -->
-    <nav class="navbar">
-
-        <a href="#" class=" hover-link active">HOME</a>
-        <a href="about.html" class="hover-link">ABOUT</a>
-        <a href="service.html" class="hover-link">SERVICE</a>
-        <a href="team.html" class="hover-link">TEAM</a>
-        <a href="contact.html" class="hover-link">CONTACT</a>
-
-        <a href="#" class="nav-toggle"><i class="fa-solid fa-bars"></i></a>
+    <nav class="navbar" id="myTopnav">
+        <div class="navlink">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="home-bar">
+            <a href="javascript:void(0);" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </nav>
-
     <!-- Home page card -->
     <!-- <section class="slider-home">
         <div class="slider">
@@ -291,6 +294,18 @@
             slides[slideIndex - 1].style.display = "block";
         }
     </script>
+
+    <!-- javascript for navbar -->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>
 </body>
 
 </html>
