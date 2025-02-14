@@ -421,6 +421,7 @@
       width: 85%;
       height: auto;
       justify-content: normal;
+      row-gap: 20px;
    }
 
    /* image container */
@@ -528,6 +529,7 @@
 
    .mission-img {
       align-self: center;
+      order: 2;
    }
 
    .mission-img img {
@@ -631,6 +633,10 @@
       width: 100%;
    }
 
+   .proprietor-img {
+      order: 2;
+   }
+
    .proprietor-img img {
       margin-top: 20px;
       height: 300px;
@@ -671,55 +677,22 @@
 }
 
 /* service */
-/* @media (max-width:1024px) and (min-width:768px){
-   .service-text {
-      margin: 50px auto 30px auto;
-  
-      p {
-          font-size: 15px;
-  
-      }
-  
-      h2 {
-          margin-left: 50px;
-          font-size: 25px;
-          font-weight: 150;
-  
-      }
-  
-  }
-
-} */
-@media (max-width:600px) and (min-width:320px) {
-   .service-text {
-      margin: 20px 0px 20px 10px;
-
-      p {
-         font-size: 15px;
-
-      }
-
-      h2 {
-         margin-left: 20px;
-         font-size: 25px;
-         font-weight: 150;
-
-      }
-
-      /* .card-container {
-      column-gap: 0px;
-     } */
-      .card {
-         /* height: auto; */
-         width: 500%;
-      }
-
+@media (max-width: 1024px) {
+   .service {
+      grid-template-columns: repeat(3, 1fr);
    }
+}
 
-   /* .home-service-button{
-      text-align: left;
-     } */
+@media (max-width: 768px) {
+   .service {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
 
+@media (max-width: 600px) {
+   .service {
+      grid-template-columns: 1fr;
+   }
 }
 
 /* contact */

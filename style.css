@@ -385,69 +385,38 @@ hr {
     color: #22405c;
     height: .1px;
     justify-self: center;
-    width: 70%;
+    width: 88%;
 }
 
-/* Services section */
+.service-container {
+    max-width: 1400px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+h2 {
+    padding: 15px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+}
+
 .service {
-    margin-bottom: 50px;
-    max-width: 1440px;
-}
-
-/* for text */
-.service-text {
-    margin: 2rem 0rem 1rem 7rem;
-    /* border: 1px solid black; */
-
-    p {
-        font-size: 18px;
-
-    }
-
-    h2 {
-        margin-left: 55px;
-
-        font-size: 40px;
-        font-weight: 150;
-
-    }
-
-}
-
-/*main card container */
-.card-container {
-    display: flex;
+    display: grid;
+    justify-items: center;
     justify-content: center;
-    /* width: 100%; */
-    flex-wrap: wrap;
-    gap: 40px 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-/* single card container */
-.card {
-    height: auto;
-    width: 275px;
-    border: 1px solid #e5e5e5;
+.card1 {
+    padding: 25px;
+    border: 2px solid rgba(128, 128, 128, 0.19);
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
 
-    /* text written inside the card */
-    .card1 {
-        padding: 36px;
-        text-align: center;
-        /* margin-bottom: 15px; */
-
-        h2 {
-            font-size: 27px;
-            font-weight: 200;
-            margin: 10px 0px;
-
-        }
-
-        p {
-            font-size: 18.5px;
-            line-height: 25px;
-        }
-    }
-
+.card1:hover {
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.429);
 }
 
 /* hovering the card */
