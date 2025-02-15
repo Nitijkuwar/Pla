@@ -712,6 +712,7 @@ h2 {
 .slider-home {
     position: relative;
     width: 100%;
+    z-index: -1;
 }
 
 .slider-img img {
