@@ -46,65 +46,6 @@
 }
 
 /* home slider */
-
-/* footer */
-
-@media (max-width:991px) and (min-width:500px) {
-   .main-footer {
-      display: flex;
-      flex-direction: column;
-   }
-
-   .head {
-      width: 100%;
-   }
-
-   .newsletter {
-      width: 100%;
-   }
-}
-
-@media (max-width:500px) and (min-width:320px) {
-   .main-footer {
-      margin: 0px 5px;
-      display: flex;
-      flex-direction: column;
-   }
-
-   .head {
-      width: 100%;
-   }
-
-   .newsletter {
-      width: 100%;
-   }
-
-   .form {
-
-      input {
-         font-size: 10px;
-      }
-
-      input::placeholder {
-         font-size: 12px;
-      }
-
-      button {
-
-         bottom: 15px;
-         width: 70px;
-         padding: 8px;
-      }
-
-
-   }
-
-   .footer p {
-      font-size: 10px;
-      font-weight: 500;
-   }
-}
-
 /* home why choose us*/
 @media (max-width: 1415px) and (min-width: 1000px) {
 
